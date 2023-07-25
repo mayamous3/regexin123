@@ -6,6 +6,19 @@ Tutorial explains regex and the identifiers that make up the following pattern:
 
 * Matching a URL: `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
 
+Tutorial covers the following information:
+- Intro to regex (i.e. regular expression)
+- URL Validation Example
+- Anchors
+- Quantifiers
+- Grouping Constructs
+- Bracket Expressions
+- Character Classes
+- OR Operators
+- Flags
+- Character Escapes
+- Summary of the URL Validation Example
+
 ## Acceptance Criteria
 
 ```md
@@ -22,3 +35,4 @@ THEN I find a section about the author and a link to the author’s GitHub profi
 
 ## Author
 Amanda Cooper-Ponte
+Portfolio: https://mayamous3.github.io/amanda-wow-portfolio/

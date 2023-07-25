@@ -135,4 +135,4 @@ To conclude, this regex pattern matches and validates URLs that meet the followi
 ## Author
 
 Amanda Cooper-Ponte
-Portfolio:
+Portfolio: https://mayamous3.github.io/amanda-wow-portfolio/
