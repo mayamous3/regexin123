@@ -69,11 +69,22 @@ In our example, the question mark is used in (https?:\/\/), and makes the "s" in
 ### Grouping Constructs
 In Regex there are two types of grouping constructs for grouping together characters that need to be treated as a single unit.
 
-1. () Parenthesis : 
+1. () Parenthesis : Used to group characters together. Matches will be made for the entire group.
+
+There are two groups in the URL validation example--
+
+* (https?:\/\/)?: This group captures the protocol part of the URL (i.e. http or https).
+
+* ([\da-z\.-]+): This group captures the domain name characters within the URL string.
 
 2. (?: ) Non-Capturing Parenthesis : These are used to group characters together without creating a capture group. This grouping construct is not used in our example.
 
 ### Bracket Expressions
+Bracket Expressions are a selection of characters enclosed within square brackets.
+
+Inside the bracket expressions, you can specify individual characters, character ranges, or character classes. 
+
+[a-z\.] is an example of a bracket expression from our URL Validation. Allowable characters for our validation are contained within the brackets.
 
 ### Character Classes
 Character Classes in Regex are collections of characters that are used to match against any single character within the input string (in our example, the URL)
@@ -90,14 +101,30 @@ Below are a few generic examples of Character Classes:
 
 You can see that #s 3 and 4 from our example (Described in Regex Components) use character classes.
 
+In [a-z\.], allowable characters are a-z and . (period)
+
 ### The OR Operator
+OR operators are represented by a | symbol and give you a way to specify alternative patterns... i.e. more than one pattern that can be matched against the input string.
+
+The URL Validation example does not include an OR operator, so I've given an example below.
+
+yes|no - this will match an input string to either yes OR no which are acceptable values.
 
 ### Flags
+Flags can be used to make adjustments to the matching behavior of the regex pattern.
+
+There are no flags in the URL validation example, but a few commonly used flags are:
+
+1. i : This flag treats uppercase and lowercase letters as the same.
+2. g : This flag gives the ability to perform multiple matches within the input string instead of stopping at the first match.
+3. m : Gives the ability to recognize the start and end of each line.
 
 ### Character Escapes
+A \ can be used to escape characters in Regex. Characters are escaped so that they can be applied in their literal sense, rather than as functions of the regex match.
+
+In [a-z\.] from our URL example, the period is the escaped character so that it can be included in the list of characters along with the lowercase letters.
 
 ## Conclusion
-
 To conclude, this regex pattern matches and validates URLs that meet the following criteria:
 * With or without a protocol (http or https).
 * Has a domain name which consists of lowercase letters, digits, periods, and hyphens.
